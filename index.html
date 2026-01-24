@@ -3,93 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yuri Oliveira - Captação Psíquica, Regressão e Psicanálise. Descubra como destravar sua vida tratando a raiz em vidas passadas.">
-    <title>Yuri Oliveira | Captação Psíquica e Regressão</title>
+    <meta name="description" content="Yuri Oliveira - Terapeuta especializado em Captação Psíquica, Regressão e Psicanálise. Destrave sua vida tratando a raiz dos bloqueios.">
+    <title>Yuri Oliveira | Terapia de Vidas Passadas e Psicanálise</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #7d8c73; /* Verde Sage Premium */
+            /* Paleta de Cores Sofisticada */
+            --primary: #7d8c73; /* Verde Sage (Autoridade e Calma) */
             --primary-dark: #5b6a53;
-            --accent: #d4a373; /* Tom Areia para destaque */
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
-            --bg-light: #fdfaf6;
+            --accent: #cbb294; /* Tom Areia/Dourado (Premium) */
+            --accent-dark: #b59c80;
+            --text-dark: #2a2a2a;
+            --text-medium: #555555;
+            --bg-offwhite: #f9f9f7; /* Fundo levemente texturizado */
             --white: #ffffff;
+            --section-spacing: 110px; /* Mais respiro entre seções */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; color: var(--text-dark); line-height: 1.8; background-color: var(--white); overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--text-dark); font-weight: 700; }
+        body { font-family: 'Lato', sans-serif; color: var(--text-dark); line-height: 1.8; background-color: var(--white); overflow-x: hidden; font-size: 16px; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--text-dark); font-weight: 700; line-height: 1.3; }
+        strong { font-weight: 700; color: var(--text-dark); }
+        
         .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
+        section { padding: var(--section-spacing) 0; }
+
+        /* BOTÕES GERAIS */
+        .btn { display: inline-block; padding: 16px 38px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+        
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); }
+        
+        .btn-accent { background: var(--accent); color: var(--white); }
+        .btn-accent:hover { background: var(--accent-dark); }
+
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 14px 36px; }
+        .btn-outline:hover { background: var(--primary); color: var(--white); }
 
         /* HEADER */
-        header { background: var(--white); padding: 20px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        header { background: var(--white); padding: 22px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4rem; color: var(--primary); text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-nav { background: var(--primary); color: #fff; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
-        .btn-nav:hover { background: var(--primary-dark); }
+        .logo { font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .btn-nav { background: var(--primary); color: #fff; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; }
 
         /* HERO SECTION */
-        .hero { padding: 120px 0 80px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; }
-        .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
+        .hero { padding: 140px 0 100px; background: linear-gradient(to right, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; }
+        .hero-flex { display: flex; align-items: center; gap: 70px; flex-wrap: wrap-reverse; }
         .hero-text { flex: 1.2; min-width: 320px; }
         .hero-img { flex: 0.8; min-width: 320px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 450px; border-radius: 8px; box-shadow: 20px 20px 0px var(--primary); }
+        .hero-img img { width: 100%; max-width: 480px; border-radius: 12px; box-shadow: 25px 25px 0px var(--primary); }
 
-        .hero h1 { font-size: 3.2rem; line-height: 1.2; margin-bottom: 25px; color: var(--primary); }
-        .hero p { font-size: 1.2rem; color: var(--text-light); margin-bottom: 35px; }
-        .cta-main { display: inline-block; background: var(--primary); color: var(--white); padding: 20px 45px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(125,140,115,0.3); transition: 0.3s; }
-        .cta-main:hover { transform: translateY(-3px); background: var(--primary-dark); }
+        .hero h1 { font-size: 3.4rem; margin-bottom: 25px; color: var(--primary-dark); }
+        .hero p { font-size: 1.25rem; color: var(--text-medium); margin-bottom: 40px; max-width: 600px; }
 
-        /* ENTREVISTA GRATUITA */
-        .free-box { background: var(--accent); color: #fff; padding: 50px 0; text-align: center; margin-top: -30px; position: relative; z-index: 10; border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        .free-box h2 { color: #fff; font-size: 2.2rem; margin-bottom: 15px; }
-        .free-box p { font-size: 1.1rem; margin-bottom: 25px; opacity: 0.9; }
-        .btn-white { background: #fff; color: var(--accent); padding: 15px 35px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        /* SEÇÃO CONVITE PREMIUM (Ex-Gratuito) */
+        .invitation-section { background-color: var(--accent); margin-top: -50px; padding: 60px 0; position: relative; z-index: 20; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-radius: 8px; color: var(--white); text-align: center; }
+        .invitation-section h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 20px; }
+        .invitation-section p { font-size: 1.15rem; opacity: 0.95; max-width: 700px; margin: 0 auto 30px; }
+        .btn-white-accent { background: var(--white); color: var(--accent-dark); }
+        .btn-white-accent:hover { background: #f0f0f0; }
 
-        /* SECTION STYLING */
-        section { padding: 100px 0; }
-        .section-title { text-align: center; max-width: 800px; margin: 0 auto 60px; }
-        .section-title h2 { font-size: 2.6rem; margin-bottom: 20px; color: var(--text-dark); }
-        .section-title p { color: var(--text-light); font-size: 1.1rem; }
+        /* TITULOS DE SEÇÃO */
+        .section-title { text-align: center; max-width: 800px; margin: 0 auto 70px; }
+        .section-title h2 { font-size: 2.8rem; margin-bottom: 20px; position: relative; display: inline-block; }
+        .section-title h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent); margin: 20px auto 0; }
+        .section-title p { color: var(--text-medium); font-size: 1.2rem; }
 
-        /* REGRESSÃO / DIFERENCIAL */
-        .diff-box { background: var(--bg-light); padding: 60px; border-radius: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; }
-        .diff-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+        /* DIFERENCIAL (Regressão) */
+        .diff-section { background-color: var(--white); }
+        .diff-box { padding: 50px; border-radius: 12px; display: flex; gap: 50px; align-items: center; border: 2px solid var(--bg-offwhite); }
+        .diff-content h3 { font-size: 2rem; margin-bottom: 25px; color: var(--primary); }
+        .diff-content p { font-size: 1.1rem; margin-bottom: 20px; color: var(--text-medium); }
+        .diff-highlight { background: var(--bg-offwhite); padding: 30px; border-radius: 8px; border-left: 4px solid var(--accent); }
 
-        /* SOLUÇÕES GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: #fff; padding: 45px; border-radius: 8px; border: 1px solid #f0f0f0; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
-        .card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+        /* GRID DE SOLUÇÕES (Com movimento) */
+        .solutions-section { background-color: var(--bg-offwhite); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+        .card { background: #fff; padding: 50px 40px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.4s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.03); position: relative; overflow: hidden; }
+        
+        /* Movimento dos cards */
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--accent); }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+        .card:hover::before { transform: scaleX(1); }
 
-        /* SOBRE YURI */
-        .about-flex { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; }
+        .card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 30px; display: block; }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .card p { color: var(--text-medium); font-size: 1.05rem; }
+
+        /* SOBRE YURI & PSICANÁLISE */
+        .about-section { background-color: var(--white); }
+        .about-flex { display: flex; gap: 70px; align-items: center; flex-wrap: wrap; }
         .about-content { flex: 1; min-width: 320px; }
-        .about-content p { margin-bottom: 20px; color: var(--text-light); font-size: 1.05rem; text-align: justify; }
-
-        /* LINK PSICANALISE */
-        .psic-link { background: #f4f4f4; padding: 40px; border-radius: 8px; text-align: center; margin-top: 40px; border-left: 5px solid var(--primary); }
-        .psic-link a { color: var(--primary); font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+        .about-content h2 { font-size: 2.8rem; margin-bottom: 30px; }
+        .about-content p { margin-bottom: 25px; color: var(--text-medium); font-size: 1.15rem; text-align: justify; }
+        .highlight-box { background: var(--bg-offwhite); padding: 40px; border-radius: 8px; margin-top: 40px; text-align: center; border: 1px solid #eee; }
 
         /* FAQ */
-        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
-        .faq-question { display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; }
-        .faq-answer { display: none; padding-top: 20px; color: var(--text-light); }
+        .faq-section { background-color: var(--bg-offwhite); }
+        .faq-item { background: var(--white); margin-bottom: 15px; padding: 25px 30px; border-radius: 8px; cursor: pointer; transition: 0.3s; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+        .faq-item:hover { border-color: var(--primary); }
+        .faq-question { display: flex; justify-content: space-between; font-weight: 700; font-size: 1.15rem; color: var(--primary-dark); }
+        .faq-answer { display: none; padding-top: 25px; color: var(--text-medium); font-size: 1.05rem; border-top: 1px solid #f0f0f0; margin-top: 20px; }
 
         /* FOOTER */
-        footer { background: #fafafa; padding: 80px 0 40px; text-align: center; border-top: 1px solid #eee; }
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
+        footer { background: #2c2c2c; color: #aaa; padding: 80px 0 40px; text-align: center; }
+        footer h3 { color: var(--white); font-size: 1.8rem; margin-bottom: 20px; }
+        footer p { margin-bottom: 10px; }
+
+        /* WHATSAPP FLOAT */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.25); z-index: 1000; text-decoration: none; transition: 0.3s; }
+        .wa-float:hover { transform: scale(1.1); }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            .section-title h2 { font-size: 2rem; }
-            .hero-flex { text-align: center; }
-            .diff-box { padding: 30px; }
+            .hero h1 { font-size: 2.6rem; }
+            .section-title h2 { font-size: 2.2rem; }
+            .hero-flex, .diff-box { flex-direction: column; text-align: center; }
+            .hero-img { margin-top: 40px; }
+            .hero-img img { box-shadow: 15px 15px 0px var(--primary); }
+            .diff-highlight { margin-top: 30px; }
+            .btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -98,7 +134,7 @@
     <header>
         <div class="container nav-inner">
             <a href="#" class="logo">Yuri Oliveira</a>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20vi%20seu%20site%20e%20quero%20minha%20entrevista%20gratuita" class="btn-nav">FALE COMIGO</a>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação" class="btn-nav">AGENDAR AVALIAÇÃO</a>
         </div>
     </header>
 
@@ -106,105 +142,105 @@
         <div class="container hero-flex">
             <div class="hero-text">
                 <h1>Sua vida parece travada e você não entende o porquê?</h1>
-                <p>Você se esforça, trabalha e tenta ser feliz, mas parece que algo invisível sempre te puxa para trás? Bloqueios no dinheiro, no amor ou medos que não fazem sentido hoje... <strong>A culpa não é sua.</strong> O peso que você carrega pode ser de suas vidas passadas.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20agendar%20minha%20entrevista%20gratuita%20de%2030%20minutos" class="cta-main">QUERO QUEBRAR ESTE CICLO</a>
+                <p>Você se esforça, trabalha e tenta ser feliz, mas parece que algo invisível sempre te puxa para trás? Bloqueios no dinheiro, no amor ou medos que não fazem sentido hoje... <strong>A culpa não é sua.</strong> O peso que você carrega pode ser de suas <strong>vidas passadas</strong>.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20agendar%20minha%20Sessão%20de%20Avaliação" class="btn btn-primary">QUERO DESTRAVAR MINHA VIDA</a>
             </div>
             <div class="hero-img">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Yuri Oliveira">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Yuri Oliveira Terapeuta">
             </div>
         </div>
     </section>
 
     <div class="container">
-        <div class="free-box">
-            <h2>Vamos conversar pessoalmente por 30 minutos?</h2>
-            <p>Eu ofereço uma conversa inicial inteiramente gratuita e online para entender o que está te travando.</p>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20garantir%20minha%20vaga%20na%20entrevista%20gratuita" class="btn-white">GARANTIR MINHA VAGA GRATUITA</a>
+        <div class="invitation-section">
+            <h2>Um convite para o seu próximo nível.</h2>
+            <p>Ofereço uma <strong>Sessão de Avaliação Inicial (online)</strong> para entendermos a raiz dos seus bloqueios e traçarmos o melhor caminho terapêutico para o seu caso.</p>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20solicitar%20minha%20Sessão%20de%20Avaliação%20Inicial" class="btn btn-white-accent">SOLICITAR MINHA AVALIAÇÃO</a>
         </div>
     </div>
 
-    <section>
+    <section class="diff-section">
         <div class="container">
             <div class="section-title">
                 <h2>O que ninguém te contou sobre o seu "Auto-boicote"</h2>
                 <p>Você está lutando contra um passado que nem lembra que viveu.</p>
             </div>
             <div class="diff-box">
-                <div class="diff-text">
-                    <h3>Já pensou em fazer Regressão, mas tem dificuldade em relaxar?</h3>
-                    <p>A <strong>Captação Psíquica</strong> entrega os mesmos resultados profundos de uma Regressão, mas com uma vantagem enorme: <strong>você não precisa entrar em transe profundo.</strong></p>
-                    <p style="margin-top: 20px;">Muitas pessoas travam na hora de relaxar. Aqui, eu atuo como uma ponte para acessar essas memórias por você. É um processo muito mais fácil, leve e focado em resultados rápidos.</p>
+                <div class="diff-content">
+                    <h3>Já pensou em fazer <strong>Regressão</strong>, mas tem dificuldade em relaxar?</h3>
+                    <p>A Captação Psíquica entrega os mesmos resultados profundos de uma Regressão, mas com uma vantagem enorme: <strong>você não precisa entrar em transe.</strong></p>
+                    <p>Muitas pessoas travam na hora de fazer uma regressão tradicional. Aqui, eu atuo como uma ponte técnica para acessar essas memórias por você. É um processo muito mais fácil, seguro e focado em resultados rápidos.</p>
                 </div>
-                <div class="diff-text" style="border-left: 2px solid #eee; padding-left: 40px;">
-                    <p>Nós não apenas "olhamos" para o passado. Nós vamos direto onde dói, limpamos a carga negativa e você já sente o alívio logo na primeira sessão.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main" style="margin-top: 30px; font-size: 0.9rem;">SAIBA COMO FUNCIONA</a>
+                <div class="diff-highlight">
+                    <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 20px;">Nós não apenas "olhamos" para o passado.</p>
+                    <p>Nós vamos direto onde dói, limpamos a carga negativa e você já sente o alívio na sua rotina logo após a primeira sessão.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #fafafa;">
+    <section class="solutions-section">
         <div class="container">
             <div class="section-title">
-                <h2>Alívio para o corpo e para o destino</h2>
-                <p>Resultados reais que outros terapeutas muitas vezes não conseguem alcançar.</p>
+                <h2>Resultados Reais na sua Vida</h2>
+                <p>Tratamos a causa raiz para gerar alívio no corpo e no destino.</p>
             </div>
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-hand-holding-usd"></i>
                     <h3>Dinheiro e Prosperidade</h3>
-                    <p>Limpamos o medo de crescer, votos de pobreza e a sensação de que você "não merece" ser próspero.</p>
+                    <p>Limpamos o medo inconsciente de crescer, votos de pobreza de outras vidas e a sensação de que você "não merece" ser próspero.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart-broken"></i>
                     <h3>Relacionamentos</h3>
-                    <p>Quebramos o ciclo de atrair pessoas que te rejeitam ou te abandonam por traumas do passado.</p>
+                    <p>Quebramos o ciclo de atrair pessoas que te rejeitam ou abandonam. Cure a ferida original para viver amores saudáveis.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-briefcase-medical"></i>
+                    <i class="fas fa-notes-medical"></i>
                     <h3>Dores Sem Explicação</h3>
-                    <p>Dores no corpo que o médico não explica? Quando limpamos a alma, o corpo finalmente relaxa.</p>
+                    <p>Dores no corpo que o médico não explica? Quando limpamos o trauma da alma, o corpo físico finalmente relaxa.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-door-open"></i>
+                    <i class="fas fa-unlock-alt"></i>
                     <h3>Fim das Travas e Medos</h3>
-                    <p>Medo de dirigir ou fobias inexplicáveis? Tiramos o peso dessas histórias antigas da sua rotina.</p>
+                    <p>Medo de dirigir, fobia social ou angústias inexplicáveis. Tiramos o peso dessas histórias antigas da sua rotina atual.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="about-section">
         <div class="container about-flex">
             <div class="about-content">
                 <h2>Entender você é a minha paixão. <br><span style="color: var(--primary);">Ver você livre é a minha missão.</span></h2>
                 <p>Minha caminhada sempre foi movida por entender o que está por trás do sofrimento humano. Comecei nas terapias naturais, mas percebi que o ser humano é muito mais profundo do que os olhos podem ver.</p>
-                <p>Mergulhei fundo na <strong>Psicanálise</strong> e no <strong>Treinamento de Pessoas (Coaching)</strong>. Unindo esse conhecimento prático com a força das terapias de vidas passadas, desenvolvi um método onde os resultados são muito mais rápidos.</p>
+                <p>Mergulhei fundo na <strong>Psicanálise</strong> e no <strong>Treinamento de Pessoas (Coaching)</strong>. Unindo esse conhecimento prático com a força das terapias de **vidas passadas**, desenvolvi um método onde os resultados são muito mais rápidos e diretos.</p>
                 <p>Minha paixão é ver o "clique" na vida do meu cliente. Você não é apenas um corpo; você é uma história eterna que merece ser feliz agora.</p>
                 
-                <div class="psic-link">
-                    <p>Também ofereço suporte especializado através da Psicanálise Clínica.</p>
-                    <a href="#">CLIQUE AQUI PARA SABER MAIS SOBRE A PSICANÁLISE →</a>
+                <div class="highlight-box">
+                    <p style="margin-bottom: 20px; font-weight: 700; color: var(--primary-dark);">Busca um mergulho diferente através da Psicanálise?</p>
+                    <a href="#" class="btn btn-outline">QUERO COMEÇAR COM A PSICANÁLISE</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: var(--bg-light);">
+    <section class="faq-section">
         <div class="container">
             <div class="section-title"><h2>Dúvidas Frequentes</h2></div>
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">Eu não consigo ser hipnotizado, funciona para mim? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Com certeza! Esse é o maior benefício. Eu faço o trabalho de acesso por você, entregando os mesmos resultados da regressão sem que você precise entrar em transe.</div>
+                    <div class="faq-answer">Com certeza! Esse é o maior benefício. Eu faço o trabalho de acesso técnico por você, entregando os mesmos resultados profundos da regressão sem que você precise entrar em transe.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">O resultado é demorado? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Não. Por irmos direto na causa (vidas passadas), a melhora costuma ser muito mais rápida que em conversas comuns. Muitos sentem alívio na primeira sessão.</div>
+                    <div class="faq-answer">Não. Por irmos direto na causa raiz (vidas passadas), a melhora costuma ser muito mais rápida que em terapias convencionais. Muitos sentem alívio significativo na primeira sessão.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">O atendimento online funciona mesmo? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim! As leis da alma não dependem de distância física. Atendo clientes de todo o Brasil com a mesma eficiência do presencial.</div>
+                    <div class="faq-answer">Sim! As leis da psique não dependem de distância física. Atendo clientes de todo o Brasil e exterior com a mesma eficiência e segurança do presencial.</div>
                 </div>
             </div>
         </div>
@@ -212,13 +248,10 @@
 
     <footer>
         <div class="container">
-            <h3 style="margin-bottom: 20px;">Yuri Oliveira</h3>
-            <p>Terapeuta Espiritualista | Psicanalista | Coach</p>
-            <p>Taubaté, SP | Atendimento Online</p>
-            <div style="margin-top: 30px;">
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main" style="padding: 15px 30px;">AGENDAR ENTREVISTA AGORA</a>
-            </div>
-            <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Yuri Oliveira - terapeutaespiritualista.com.br</p>
+            <h3 style="color: #fff; letter-spacing: 2px;">YURI OLIVEIRA</h3>
+            <p style="color: var(--primary); font-weight: 700; margin-bottom: 30px;">Terapeuta Espiritualista | Psicanalista | Coach</p>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn btn-accent">AGENDAR MINHA AVALIAÇÃO</a>
+            <p style="margin-top: 60px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 Yuri Oliveira Terapia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -238,6 +271,9 @@
             if (!isOpen) {
                 answer.style.display = 'block';
                 icon.className = 'fas fa-minus';
+                el.style.borderColor = 'var(--primary)';
+            } else {
+                 el.style.borderColor = '#eee';
             }
         }
     </script>
