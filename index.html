@@ -19,6 +19,8 @@
         header { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.1rem; color: var(--primary); text-decoration: none; font-weight: 700; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; }
         .btn-nav { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.8rem; }
 
         .hero { padding: 100px 0; background: var(--bg); }
@@ -47,6 +49,10 @@
         .faq-question { display: flex; justify-content: space-between; font-weight: 700; }
         .faq-answer { display: none; padding-top: 15px; color: #666; }
 
+        .page-link-box { background: #333; color: #fff; padding: 60px 0; text-align: center; }
+        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid #fff; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px; transition: 0.3s; }
+        .btn-outline:hover { background: #fff; color: #333; }
+
         footer { background: #fafafa; padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
     </style>
@@ -55,8 +61,11 @@
 
     <header>
         <div class="container nav-inner">
-            <a href="#" class="logo">Yuri Oliveira - Terapeuta de Vida Passada</a>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">FALAR COMIGO</a>
+            <a href="index.html" class="logo">Yuri Oliveira - Terapeuta de Vida Passada</a>
+            <div class="nav-links">
+                <a href="psicanalise.html">Psicanálise</a>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">FALAR COMIGO</a>
+            </div>
         </div>
     </header>
 
@@ -103,7 +112,7 @@
             <div class="grid">
                 <div class="card"><i class="fas fa-coins"></i><h3>Prosperidade</h3><p>Limpamos o medo do sucesso e traumas de escassez de outras vidas.</p></div>
                 <div class="card"><i class="fas fa-heart"></i><h3>Relacionamentos</h3><p>Quebramos o ciclo de rejeição e abandono que se repete em seus vínculos.</p></div>
-                <div class="card"><i class="fas fa-hand-holding-medical"></i><h3>Dores Físicas</h3><p>Muitas dores sem explicação médica são gritos da alma. Ao limpar o passado, o corpo finalmente relaxa.</p></div>
+                <div class="card"><i class="fas fa-briefcase-medical"></i><h3>Dores Físicas</h3><p>Muitas dores sem explicação médica são gritos da alma. Ao limpar o passado, o corpo finalmente relaxa.</p></div>
             </div>
         </div>
     </section>
@@ -118,7 +127,7 @@
                 <p>Minha jornada é movida por uma pergunta: por que as pessoas sofrem tanto? Comecei nas terapias naturais e percebi que somos muito mais profundos do que os olhos podem ver.</p>
                 <p>Busquei a base científica na <strong>Psicanálise</strong> e a performance no <strong>Coaching</strong>. Unindo tudo isso à força das terapias de vidas passadas, desenvolvi um caminho onde os resultados são muito mais velozes.</p>
                 <p>Minha paixão é ver o "despertar" do meu cliente. Entendo que somos feitos de corpo e alma, e é por isso que consigo resultados que outros terapeutas não alcançam.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20começar%20com%20a%20Psicanálise" class="cta-main" style="margin-top:20px; background: #333;">QUERO COMEÇAR COM A PSICANÁLISE</a>
+                <a href="psicanalise.html" class="cta-main" style="margin-top:20px; background: #333;">QUERO CONHECER A PSICANÁLISE</a>
             </div>
         </div>
     </section>
@@ -145,11 +154,19 @@
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">A terapia ajuda em dores físicas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim. Dores sem explicação médica são gritos da alma. Quando limpamos a memória antiga, o corpo relaxa e a dor pode desaparecer.</div>
+                    <div class="faq-answer">Sim. Dores que o médico não explica muitas vezes são traumas antigos. Quando limpamos a alma, o corpo relaxa e a dor pode sumir.</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="page-link-box">
+        <div class="container">
+            <h3>Deseja fortalecer sua base interna e dominar suas emoções?</h3>
+            <p>Conheça também meu trabalho com Psicanálise Espiritualista para estruturar seu ego e prosperar de verdade.</p>
+            <a href="psicanalise.html" class="btn-outline">VER PSICANÁLISE ESPIRITUALISTA</a>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
