@@ -68,7 +68,7 @@
                 <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20entrevista%20gratuita" class="cta-main">QUERO QUEBRAR ESTE CICLO</a>
             </div>
             <div class="hero-img">
-                <img src="foto-topo.jpg" alt="Yuri Oliveira - Terapia de Vida Passada">
+                <img src="foto-topo.png.png" alt="Yuri Oliveira - Terapia de Vida Passada">
             </div>
         </div>
     </section>
@@ -103,7 +103,7 @@
             <div class="grid">
                 <div class="card"><i class="fas fa-coins"></i><h3>Prosperidade</h3><p>Limpamos o medo do sucesso e traumas de escassez de outras vidas.</p></div>
                 <div class="card"><i class="fas fa-heart"></i><h3>Relacionamentos</h3><p>Quebramos o ciclo de rejeição e abandono que se repete em seus vínculos.</p></div>
-                <div class="card"><i class="fas fa-body"></i><h3>Dores Físicas</h3><p>Muitas dores sem explicação médica são gritos da alma. Ao limpar o passado, o corpo relaxa.</p></div>
+                <div class="card"><i class="fas fa-hand-holding-medical"></i><h3>Dores Físicas</h3><p>Muitas dores sem explicação médica são gritos da alma. Ao limpar o passado, o corpo finalmente relaxa.</p></div>
             </div>
         </div>
     </section>
@@ -111,14 +111,14 @@
     <section class="about" style="background: var(--bg);">
         <div class="container about-grid">
             <div class="about-photo">
-                <img src="foto-perfil.jpg" alt="Yuri Oliveira">
+                <img src="foto-perfil.png.png" alt="Yuri Oliveira">
             </div>
             <div class="about-text">
                 <h2>Entender você é a minha paixão. <br><span style="color: var(--primary);">Ver você livre é a minha missão.</span></h2>
-                <p>Minha jornada é movida por entender por que as pessoas sofrem. Comecei nas terapias naturais e percebi que somos muito mais profundos do que os olhos podem ver.</p>
+                <p>Minha jornada é movida por uma pergunta: por que as pessoas sofrem tanto? Comecei nas terapias naturais e percebi que somos muito mais profundos do que os olhos podem ver.</p>
                 <p>Busquei a base científica na <strong>Psicanálise</strong> e a performance no <strong>Coaching</strong>. Unindo tudo isso à força das terapias de vidas passadas, desenvolvi um caminho onde os resultados são muito mais velozes.</p>
                 <p>Minha paixão é ver o "despertar" do meu cliente. Entendo que somos feitos de corpo e alma, e é por isso que consigo resultados que outros terapeutas não alcançam.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main" style="margin-top:20px; background: #333;">QUERO COMEÇAR COM A PSICANÁLISE</a>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20começar%20com%20a%20Psicanálise" class="cta-main" style="margin-top:20px; background: #333;">QUERO COMEÇAR COM A PSICANÁLISE</a>
             </div>
         </div>
     </section>
@@ -133,11 +133,11 @@
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">Como sei que meus problemas vêm de vidas passadas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Se você vive padrões repetitivos (mesmos erros no amor ou dinheiro) ou tem medos inexplicáveis, a raiz quase sempre está no passado da sua alma.</div>
+                    <div class="faq-answer">Se você vive padrões repetitivos ou tem medos inexplicáveis, a raiz quase sempre está no passado da sua alma.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">O resultado é demorado? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Não. Como vamos direto na causa raiz, o alívio costuma ser imediato. É muito mais rápido do que apenas conversar por anos.</div>
+                    <div class="faq-answer">Não. Como vamos direto na causa raiz, o alívio costuma ser imediato. É um caminho muito mais rápido do que terapias comuns.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">O atendimento online funciona? <i class="fas fa-plus"></i></div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">A terapia ajuda em dores físicas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim. Dores que o médico não explica muitas vezes são traumas antigos. Quando limpamos a alma, o corpo relaxa e a dor pode sumir.</div>
+                    <div class="faq-answer">Sim. Dores sem explicação médica são gritos da alma. Quando limpamos a memória antiga, o corpo relaxa e a dor pode desaparecer.</div>
                 </div>
             </div>
         </div>
@@ -163,3 +163,14 @@
     <a href="https://api.whatsapp.com/send?phone=5512974118240" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <script>
+        function toggleFaq(el) {
+            const answer = el.querySelector('.faq-answer');
+            const icon = el.querySelector('i');
+            const isOpen = answer.style.display === 'block';
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            document.querySelectorAll('.faq-question i').forEach(i => i.className = 'fas fa-plus');
+            if (!isOpen) { answer.style.display = 'block'; icon.className = 'fas fa-minus'; }
+        }
+    </script>
+</body>
+</html>
