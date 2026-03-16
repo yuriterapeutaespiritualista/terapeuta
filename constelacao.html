@@ -3,63 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yuri Oliveira - Constelação Familiar Individual. Descubra os padrões invisíveis que travam sua vida.">
+    <meta name="description" content="Yuri Oliveira - Constelação Familiar Individual. Quebre os padrões invisíveis que travam sua vida.">
     <title>Yuri Oliveira | Constelação Familiar Individual</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #7d8c73; --accent: #d4a373; --text: #2c2c2c; --bg: #fdfaf6; }
+        :root { 
+            --primary: #9b111e; /* Vermelho Profundo */
+            --accent: #1a1a1a;  /* Preto Fosco */
+            --text: #000000; 
+            --light-text: #ffffff;
+            --bg: #f4f4f4; 
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; color: var(--text); line-height: 1.8; background: #fff; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; text-transform: uppercase; letter-spacing: -1px; }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
 
-        header { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; color: var(--primary); text-decoration: none; font-weight: 700; text-transform: uppercase; }
-        .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; }
-        .btn-nav { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.8rem; }
+        .logo { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 900; }
+        .btn-nav { background: var(--primary); color: #fff; padding: 12px 24px; border-radius: 0px; text-decoration: none; font-weight: 900; font-size: 0.8rem; transition: 0.3s; }
+        .btn-nav:hover { background: #fff; color: var(--primary); }
 
-        .hero { padding: 100px 0; background: var(--bg); }
+        .hero { padding: 100px 0; background: #000; color: #fff; }
         .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
         .hero-text { flex: 1.2; min-width: 320px; }
         .hero-img { flex: 0.8; min-width: 320px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 20px 20px 0px var(--primary); }
-        .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 25px; color: var(--primary); }
-        .cta-main { display: inline-block; background: var(--primary); color: #fff; padding: 20px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1.1rem; text-align: center; }
+        .hero-img img { width: 100%; max-width: 400px; border-radius: 0px; border: 10px solid var(--primary); filter: grayscale(20%); }
+        .hero h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 25px; color: #fff; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.8; }
+        .cta-main { display: inline-block; background: var(--primary); color: #fff; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
+        .cta-main:hover { transform: scale(1.05); background: #cc162b; }
 
-        .section-light { padding: 80px 0; background: #fff; }
-        .section-bg { padding: 80px 0; background: var(--bg); }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+        .section-dark { padding: 100px 0; background: var(--accent); color: #fff; }
+        .section-light { padding: 100px 0; background: #fff; }
+        .section-title { text-align: left; margin-bottom: 60px; border-left: 8px solid var(--primary); padding-left: 20px; }
+        .section-title h2 { font-size: 2.8rem; color: inherit; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { padding: 35px; border: 1px solid #eee; border-radius: 8px; background: #fff; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .card { padding: 40px; background: #f9f9f9; border-bottom: 5px solid var(--primary); transition: 0.3s; }
+        .card:hover { background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #000; }
 
-        .price-box { background: var(--accent); color: #fff; padding: 60px 40px; text-align: center; border-radius: 8px; margin: 40px 0; }
-        .price-box h3 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
-        .price-box p { font-size: 1.1rem; margin-bottom: 25px; opacity: 0.9; }
-        .btn-white { display: inline-block; background: #fff; color: var(--accent); padding: 18px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        .price-box { background: var(--primary); color: #fff; padding: 80px 40px; text-align: center; margin: 40px 0; }
+        .price-box h3 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
+        .price-val { font-size: 5rem; font-weight: 900; margin: 20px 0; line-height: 1; }
+        .btn-white { display: inline-block; background: #000; color: #fff; padding: 20px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; transition: 0.3s; }
+        .btn-white:hover { background: #fff; color: #000; }
 
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; }
-        .about-photo img { width: 100%; border-radius: 8px; box-shadow: -20px 20px 0px var(--accent); }
-        .about-text h2 { font-size: 2.2rem; margin-bottom: 25px; line-height: 1.2; color: var(--primary); }
+        .about-photo img { width: 100%; border-left: 15px solid var(--primary); }
+        .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; color: var(--primary); }
+        .about-text p { font-size: 1.1rem; margin-bottom: 20px; }
 
-        .footer-links { background: #333; color: #fff; padding: 60px 0; text-align: center; }
-        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid #fff; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px; transition: 0.3s; margin: 10px; }
-        .btn-outline:hover { background: #fff; color: #333; }
+        .footer-links { background: #000; color: #fff; padding: 80px 0; text-align: center; border-top: 1px solid #333; }
+        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid var(--primary); text-decoration: none; font-weight: 700; margin: 10px; transition: 0.3s; }
+        .btn-outline:hover { background: var(--primary); }
 
-        footer { background: #fafafa; padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
+        footer { background: #000; color: #666; padding: 40px 0; text-align: center; font-size: 0.8rem; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            .section-title h2 { font-size: 2rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .section-title h2 { font-size: 2.2rem; }
+            .price-val { font-size: 4rem; }
         }
     </style>
 </head>
@@ -67,20 +78,17 @@
 
     <header>
         <div class="container nav-inner">
-            <a href="index.html" class="logo">Yuri Oliveira | Constelação Familiar</a>
-            <div class="nav-links">
-                <a href="index.html" style="display: none;" id="back-home">Início</a>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">FALAR COMIGO</a>
-            </div>
+            <a href="index.html" class="logo">YURI OLIVEIRA | CONSTELAÇÃO SISTÊMICA</a>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">AGENDAR AGORA</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-flex">
             <div class="hero-text">
-                <h1>Existe um padrão invisível que pode estar travando sua vida.</h1>
-                <p>Relacionamentos que falham, dificuldades com dinheiro ou carregar um peso emocional sem motivo... Na maioria das vezes, isso não começa em você, mas no seu sistema familiar.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20Constelação%20Familiar" class="cta-main">AGENDAR MINHA CONSTELAÇÃO</a>
+                <h1>EXISTE UM PADRÃO INVISÍVEL TRAVANDO SUA VIDA.</h1>
+                <p>Relacionamentos que falham, dinheiro que some e um peso que não é seu. Isso não começa em você, mas eu ajudo você a dar um fim nisso.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20Constelação%20Familiar" class="cta-main">QUEBRAR ESTE PADRÃO AGORA</a>
             </div>
             <div class="hero-img">
                 <img src="toponovo.png" alt="Constelação Familiar - Yuri Oliveira">
@@ -91,54 +99,48 @@
     <section class="section-light">
         <div class="container">
             <div class="section-title">
-                <h2>Como Funciona?</h2>
-                <p>Em uma sessão individual online, utilizamos a representação sistêmica para visualizar as dinâmicas ocultas do seu sistema familiar.</p>
+                <h2>COMO FUNCIONA O PROCESSO</h2>
             </div>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-search"></i>
-                    <h3>Clareza Imediata</h3>
-                    <p>Em poucos minutos surgem respostas sobre escolhas de relacionamentos e por que o dinheiro parece escapar mesmo com trabalho duro.</p>
+                    <i class="fas fa-eye"></i>
+                    <h3>Visualização Real</h3>
+                    <p>Usamos representação sistêmica online para expor as dinâmicas ocultas que você ignora hoje.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-unlock-alt"></i>
-                    <h3>Fim da Luta</h3>
-                    <p>Quando o padrão se torna visível, você deixa de lutar contra algo que não entende e pode finalmente mudar a direção da própria vida.</p>
+                    <i class="fas fa-bolt"></i>
+                    <h3>Respostas Rápidas</h3>
+                    <p>Entenda em poucos minutos por que suas decisões levam você sempre para o mesmo lugar de dor.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Lealdades Reais</h3>
-                    <p>Identificamos histórias não resolvidas e destinos que você acabou repetindo sem perceber, permitindo que a vida se reorganize.</p>
+                    <i class="fas fa-skull-crossbones"></i>
+                    <h3>Fim das Lealdades</h3>
+                    <p>Pare de repetir histórias trágicas que não são suas. Deixe de lutar contra o que você não entende.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-bg">
+    <section class="section-dark">
         <div class="container">
             <div class="section-title">
-                <h2>Situações Comuns na Constelação</h2>
+                <h2 style="color: #fff;">ONDE A CONSTELAÇÃO ATUA</h2>
             </div>
             <div class="grid">
-                <div class="card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Bloqueios no Amor</h3>
-                    <p>Relacionamentos que se repetem ou não evoluem.</p>
+                <div class="card" style="background: #222; border-color: var(--primary);">
+                    <i class="fas fa-heart-broken"></i>
+                    <h3 style="color: #fff;">BLOQUEIOS NO AMOR</h3>
+                    <p style="color: #ccc;">Ciclos de rejeição e abandono que se repetem de forma implacável.</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-coins"></i>
-                    <h3>Problemas Financeiros</h3>
-                    <p>Dificuldade em prosperar ou manter estabilidade.</p>
+                <div class="card" style="background: #222; border-color: var(--primary);">
+                    <i class="fas fa-chart-line-down"></i>
+                    <h3 style="color: #fff;">PROBLEMAS FINANCEIROS</h3>
+                    <p style="color: #ccc;">A escassez que persegue sua família e trava sua prosperidade real.</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-users"></i>
-                    <h3>Conflitos Familiares</h3>
-                    <p>Ressentimentos ou pesos emocionais herdados.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-anchor"></i>
-                    <h3>Vida Travada</h3>
-                    <p>Quando algo invisível impede você de avançar.</p>
+                <div class="card" style="background: #222; border-color: var(--primary);">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3 style="color: #fff;">CONFLITOS DE SANGUE</h3>
+                    <p style="color: #ccc;">Distanciamentos e pesos emocionais herdados que você carrega sem saber.</p>
                 </div>
             </div>
         </div>
@@ -147,44 +149,41 @@
     <section class="section-light">
         <div class="container">
             <div class="price-box">
-                <h3>Sessão de Constelação Familiar</h3>
-                <p>Sessão individual online | Duração média: 120 minutos | Atendimento direto com Yuri Oliveira</p>
-                <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">R$ 149</div>
-                <p style="max-width: 600px; margin: 0 auto 30px;">Este valor especial existe para que qualquer pessoa possa dar o primeiro passo e descobrir o que realmente está travando sua vida.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20aproveitar%20o%20valor%20de%20acesso%20da%20Constelação" class="btn-white">AGENDAR CONSTELAÇÃO AGORA</a>
+                <h3>SESSÃO INDIVIDUAL ONLINE</h3>
+                <p>120 minutos de imersão total | Atendimento direto com Yuri Oliveira</p>
+                <div class="price-val">R$ 149</div>
+                <p style="max-width: 600px; margin: 0 auto 40px; font-weight: bold;">VALOR ESPECIAL DE ACESSO: Para que você pare de dar desculpas e resolva o que te trava.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20aproveitar%20o%20valor%20de%20acesso%20da%20Constelação" class="btn-white">QUERO MINHA SESSÃO</a>
             </div>
         </div>
     </section>
 
-    <section class="section-bg">
+    <section class="section-light" style="background: #f9f9f9;">
         <div class="container about-grid">
             <div class="about-photo">
                 <img src="basenovo.png" alt="Yuri Oliveira">
             </div>
             <div class="about-text">
-                <h2>Sobre Yuri Oliveira</h2>
-                <p>Meu trabalho é ajudar pessoas a enxergarem padrões invisíveis que influenciam suas escolhas, emoções e caminhos de vida.</p>
-                <p>Unindo abordagens sistêmicas, psicanálise e terapias profundas, desenvolvi um método focado em revelar rapidamente a raiz de muitos bloqueios emocionais e familiares.</p>
-                <p><strong>Quando essas dinâmicas aparecem, a pessoa deixa de repetir histórias que nunca foram realmente suas.</strong></p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main" style="background: #333; margin-top: 15px;">FALAR COMIGO NO WHATSAPP</a>
+                <h2>YURI OLIVEIRA</h2>
+                <p>Meu trabalho é direto: ajudar pessoas a enxergarem os padrões invisíveis que governam suas vidas.</p>
+                <p>Unindo Psicanálise e abordagens sistêmicas, desenvolvi um método focado em revelar a raiz dos bloqueios sem enrolação.</p>
+                <p><strong>Quando a verdade aparece, você deixa de repetir histórias que nunca foram suas.</strong></p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main" style="margin-top: 15px;">FALAR NO WHATSAPP</a>
             </div>
         </div>
     </section>
 
     <div class="footer-links">
         <div class="container">
-            <h3>Conheça outras formas de destravar sua vida:</h3>
-            <a href="index.html" class="btn-outline">TERAPIA DE VIDA PASSADA</a>
-            <a href="psicanalise.html" class="btn-outline">PSICANÁLISE ESPIRITUALISTA</a>
+            <h3>OUTRAS SOLUÇÕES:</h3>
+            <a href="index.html" class="btn-outline">VIDA PASSADA</a>
+            <a href="psicanalise.html" class="btn-outline">PSICANÁLISE</a>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <h3>Yuri Oliveira</h3>
-            <p>Constelação Familiar | Psicanalista | Terapeuta</p>
-            <p>Taubaté, SP | Atendimento Online</p>
-            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Yuri Oliveira - terapeutaespiritualista.com.br</p>
+            <p>&copy; 2026 YURI OLIVEIRA - TAUBATÉ/SP - TERAPEUTAESPIRITUALISTA.COM.BR</p>
         </div>
     </footer>
 
