@@ -11,62 +11,68 @@
     
     <style>
         :root { 
-            --primary: #2e0854; /* Índigo Profundo */
-            --accent: #8a2be2;  /* Violeta Elétrico */
-            --text: #1a1a1a; 
-            --light-bg: #f5f3f7;
-            --white: #ffffff;
+            --primary: #000000; 
+            --accent: #444444;  
+            --highlight: #ffffff;
+            --text-gray: #a0a0a0;
+            --bg-dark: #121212;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
+        body { font-family: 'Inter', sans-serif; color: #fff; line-height: 1.6; background: var(--primary); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; text-transform: uppercase; letter-spacing: -1px; }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
 
-        header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+        header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 900; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { text-decoration: none; color: #ccc; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-        .btn-nav { background: var(--primary); color: #fff; padding: 12px 24px; border-radius: 0px; text-decoration: none; font-weight: 900; font-size: 0.8rem; border: 1px solid var(--accent); transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--text-gray); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
+        .btn-nav { border: 2px solid #fff; color: #fff; padding: 10px 20px; text-decoration: none; font-weight: 900; font-size: 0.8rem; transition: 0.3s; }
+        .btn-nav:hover { background: #fff; color: #000; }
 
-        .hero { padding: 100px 0; background: var(--primary); color: #fff; background-image: linear-gradient(135deg, #2e0854 0%, #1a052e 100%); }
+        .hero { padding: 100px 0; background: var(--primary); }
         .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
         .hero-text { flex: 1.2; min-width: 320px; }
         .hero-img { flex: 0.8; min-width: 320px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 0px; border: 10px solid var(--accent); box-shadow: 0 0 30px rgba(138, 43, 226, 0.3); }
+        .hero-img img { width: 100%; max-width: 400px; border: 1px solid #444; filter: grayscale(30%); transition: 0.5s; }
+        .hero-img img:hover { filter: grayscale(0%); border-color: #fff; }
         .hero h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 25px; color: #fff; }
-        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.9; }
-        .cta-main { display: inline-block; background: var(--accent); color: #fff; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
-        .cta-main:hover { transform: scale(1.05); background: #9d4edd; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; color: var(--text-gray); }
+        .cta-main { display: inline-block; background: #fff; color: #000; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
+        .cta-main:hover { background: #ccc; transform: translateY(-3px); }
 
-        .special-box { background: #000; color: #fff; padding: 60px 40px; text-align: center; margin: 40px 0; border: 2px solid var(--accent); }
-        .special-box h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--accent); }
-        .btn-white { display: inline-block; background: #fff; color: #000; padding: 18px 40px; text-decoration: none; font-weight: 900; margin-top: 25px; transition: 0.3s; }
+        .invite-box { background: #1a1a1a; padding: 60px 40px; text-align: center; margin: 40px 0; border: 1px solid #333; }
+        .invite-box h2 { color: #fff; font-size: 2rem; margin-bottom: 15px; }
+        .btn-outline-white { display: inline-block; border: 2px solid #fff; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 900; margin-top: 20px; transition: 0.3s; }
+        .btn-outline-white:hover { background: #fff; color: #000; }
 
-        .section-light { padding: 100px 0; background: #fff; }
-        .section-title { text-align: left; margin-bottom: 60px; border-left: 8px solid var(--primary); padding-left: 20px; }
-        .section-title h2 { font-size: 2.8rem; color: var(--primary); }
+        .section-title { text-align: left; margin-bottom: 60px; border-left: 10px solid #fff; padding-left: 20px; }
+        .section-title h2 { font-size: 2.8rem; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { padding: 40px; background: var(--light-bg); border-bottom: 5px solid var(--primary); transition: 0.3s; }
-        .card:hover { background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 25px; display: block; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .card { padding: 45px; background: #1a1a1a; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { border-color: #fff; background: #222; }
+        .card i { font-size: 2.5rem; color: #fff; margin-bottom: 25px; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
+        .card p { color: var(--text-gray); }
 
-        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; }
-        .about-photo img { width: 100%; border-left: 15px solid var(--primary); }
-        .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; color: var(--primary); }
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; padding: 100px 0; }
+        .about-photo img { width: 100%; border: 1px solid #333; }
+        .about-text h2 { font-size: 3rem; margin-bottom: 30px; }
+        .about-text p { font-size: 1.1rem; color: var(--text-gray); margin-bottom: 20px; }
 
-        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
-        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: var(--primary); font-size: 1.1rem; }
-        .faq-answer { display: none; padding-top: 15px; color: #555; }
+        .faq-section { padding: 100px 0; background: #0a0a0a; }
+        .faq-item { border-bottom: 1px solid #333; padding: 25px 0; cursor: pointer; transition: 0.3s; }
+        .faq-item:hover { background: #111; }
+        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: #fff; font-size: 1.1rem; text-transform: uppercase; }
+        .faq-answer { display: none; padding-top: 20px; color: var(--text-gray); font-size: 1rem; line-height: 1.8; }
 
-        .footer-links { background: #000; color: #fff; padding: 80px 0; text-align: center; border-top: 1px solid #333; }
-        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid var(--accent); text-decoration: none; font-weight: 700; margin: 10px; transition: 0.3s; }
-        .btn-outline:hover { background: var(--accent); }
+        .footer-links { background: #000; padding: 80px 0; text-align: center; border-top: 1px solid #333; }
+        .btn-footer { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 1px solid #444; text-decoration: none; font-weight: 700; margin: 10px; transition: 0.3s; }
+        .btn-footer:hover { border-color: #fff; }
 
-        footer { background: #000; color: #666; padding: 40px 0; text-align: center; font-size: 0.8rem; }
+        footer { background: #000; color: #444; padding: 40px 0; text-align: center; font-size: 0.8rem; letter-spacing: 2px; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
 
         @media (max-width: 992px) { .nav-links { display: none; } }
@@ -93,7 +99,7 @@
         <div class="container hero-flex">
             <div class="hero-text">
                 <h1>SUA VIDA PARECE TRAVADA E VOCÊ NÃO ENTENDE O PORQUÊ?</h1>
-                <p>Bloqueios financeiros, fracassos no amor ou medos irracionais... O peso que você carrega hoje pode ter raízes em suas vidas passadas. Chegou a hora de cortar esse vínculo.</p>
+                <p>Bloqueios financeiros, fracassos no amor ou medos irracionais... O peso que você carrega hoje não é seu. Chegou a hora de cortar o que te prende ao passado.</p>
                 <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20entrevista%20gratuita" class="cta-main">QUEBRAR ESTE CICLO AGORA</a>
             </div>
             <div class="hero-img">
@@ -103,76 +109,74 @@
     </section>
 
     <div class="container">
-        <div class="special-box">
+        <div class="invite-box">
             <h2>ENTREVISTA INICIAL GRATUITA</h2>
-            <p>Ganhe 30 minutos de conversa online para identificarmos o que está te segurando. Sem compromisso.</p>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20marcar%20minha%20entrevista%20gratuita" class="btn-white">AGENDAR MINHA VAGA</a>
+            <p>30 minutos online para identificarmos a raiz do seu bloqueio. Sem rodeios.</p>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20marcar%20minha%20entrevista%20gratuita" class="btn-outline-white">AGENDAR MINHA VAGA</a>
         </div>
     </div>
 
-    <section class="section-light" style="background: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>REGRESSÃO SEM TRANSE PROFUNDO</h2>
+    <section class="container">
+        <div class="section-title">
+            <h2>REGRESSÃO SEM TRANSE</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-bolt"></i>
+                <h3>DIRETO AO PONTO</h3>
+                <p>A Captação Psíquica entrega resultados de regressão tradicional sem que você precise "apagar" ou ter dificuldade em relaxar.</p>
             </div>
-            <div class="grid">
-                <div class="card" style="background:#fff">
-                    <i class="fas fa-bolt"></i>
-                    <h3>MAIS RÁPIDO</h3>
-                    <p>A Captação Psíquica entrega resultados de regressão tradicional sem que você precise "apagar" ou ter dificuldade em relaxar.</p>
-                </div>
-                <div class="card" style="background:#fff">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>EU SOU A PONTE</h3>
-                    <p>Eu acesso as memórias e registros por você. Um processo leve, seguro e focado em limpar a carga que trava o seu presente.</p>
-                </div>
+            <div class="card">
+                <i class="fas fa-eye"></i>
+                <h3>CONSCIÊNCIA TOTAL</h3>
+                <p>Eu acesso as memórias e registros por você. Você assiste ao processo consciente, enquanto limpamos a carga que trava seu presente.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>O QUE VAMOS RESOLVER?</h2>
-            </div>
-            <div class="grid">
-                <div class="card"><i class="fas fa-hand-holding-usd"></i><h3>PROSPERIDADE</h3><p>Limpamos o medo do sucesso e traumas de escassez que sua alma carrega.</p></div>
-                <div class="card"><i class="fas fa-heart-broken"></i><h3>RELACIONAMENTOS</h3><p>Quebramos o ciclo de rejeição e abandono que se repete em seus vínculos.</p></div>
-                <div class="card"><i class="fas fa-pills"></i><h3>DORES DA ALMA</h3><p>Muitas dores sem explicação médica são memórias traumáticas. Ao limpar o passado, o corpo relaxa.</p></div>
-            </div>
+    <section class="container" style="padding: 100px 0;">
+        <div class="section-title">
+            <h2>O QUE VAMOS RESOLVER?</h2>
+        </div>
+        <div class="grid">
+            <div class="card"><i class="fas fa-hand-holding-usd"></i><h3>FINANCEIRO</h3><p>Limpamos o medo do sucesso e os votos de pobreza que sua alma ainda carrega.</p></div>
+            <div class="card"><i class="fas fa-heart-broken"></i><h3>RELAÇÕES</h3><p>Quebramos o ciclo de abandono e rejeição que você repete em seus vínculos.</p></div>
+            <div class="card"><i class="fas fa-shield-virus"></i><h3>CORPO</h3><p>Dores e fobias sem explicação médica são memórias traumáticas. Limpe a alma e o corpo relaxa.</p></div>
         </div>
     </section>
 
-    <section class="section-light" style="background: #f9f9f9;">
-        <div class="container about-grid">
-            <div class="about-photo">
-                <img src="basenovo.png" alt="Yuri Oliveira">
-            </div>
-            <div class="about-text">
-                <h2>YURI OLIVEIRA</h2>
-                <p>Minha jornada é movida por uma missão: por que as pessoas sofrem tanto se o potencial delas é infinito?</p>
-                <p>Unindo a base científica da **Psicanálise** com a força das terapias de vidas passadas, desenvolvi um método onde os resultados são brutais e velozes.</p>
-                <p><strong>Ver o seu despertar não é apenas meu trabalho, é a minha paixão.</strong></p>
-                <a href="psicanalise.html" class="cta-main" style="margin-top:20px; background: #333;">CONHECER A PSICANÁLISE</a>
-            </div>
+    <section class="container about-grid">
+        <div class="about-photo">
+            <img src="basenovo.png" alt="Yuri Oliveira">
+        </div>
+        <div class="about-text">
+            <h2>YURI OLIVEIRA</h2>
+            <p>Minha missão é simples: por que você continua sofrendo se o seu potencial é infinito?</p>
+            <p>Unindo a **Psicanálise** à força das terapias de vidas passadas, desenvolvi um método focado em resultados velozes. Sem misticismo vazio, apenas libertação real.</p>
+            <p><strong>Ver você assumir o comando da sua própria história é o que me move.</strong></p>
+            <a href="psicanalise.html" class="cta-main" style="margin-top:20px;">CONHECER A PSICANÁLISE</a>
         </div>
     </section>
 
-    <section class="section-light">
+    <section class="faq-section">
         <div class="container">
-            <div class="section-title"><h2>PERGUNTAS CRUCIAIS</h2></div>
-            <div style="max-width: 850px;">
+            <div class="section-title"><h2>PERGUNTAS FREQUENTES</h2></div>
+            <div style="max-width: 900px;">
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">Eu corro algum risco de não voltar? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Zero. Na Captação Psíquica você fica consciente o tempo todo. Eu acesso as informações para você, tornando o processo 100% seguro.</div>
+                    <div class="faq-question">Eu corro o risco de "ficar preso" no passado? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Impossível. Você não sai do lugar. Na Captação Psíquica, você permanece consciente e conversando comigo o tempo todo. Eu sou o instrumento que acessa as memórias, você apenas recebe a limpeza e a compreensão.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">E se eu não acreditar em vidas passadas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Seu inconsciente não precisa de crenças, ele precisa de símbolos. O método funciona independente da sua religião ou ceticismo, pois acessa bloqueios emocionais reais.</div>
+                    <div class="faq-question">Preciso acreditar em reencarnação para funcionar? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Não. O seu inconsciente trabalha com símbolos. Mesmo que você seja cético, o método acessa bloqueios emocionais reais que estão registrados na sua psique. O resultado aparece na sua vida, independente da sua crença.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O resultado é realmente imediato? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim. Ao limparmos a carga energética de um trauma do passado, o alívio emocional e a mudança de percepção no seu dia a dia acontecem na mesma semana.</div>
+                    <div class="faq-question">Por que escolher isso em vez de terapia comum? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">A terapia comum trata o "sintoma" no presente. A Captação vai na "causa raiz" que pode estar oculta há séculos. É um atalho de anos de conversa em apenas algumas sessões.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Como essa terapia ajuda na minha carreira? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Muitos profissionais não prosperam por "lealdades invisíveis" ao fracasso de antepassados ou traumas de perseguição em outras vidas. Limpar isso é como tirar o freio de mão do seu sucesso financeiro.</div>
                 </div>
             </div>
         </div>
@@ -180,15 +184,15 @@
 
     <div class="footer-links">
         <div class="container">
-            <h3>OUTROS CAMINHOS DE EVOLUÇÃO:</h3>
-            <a href="psicanalise.html" class="btn-outline">PSICANÁLISE ESPIRITUALISTA</a>
-            <a href="constelacao.html" class="btn-outline">CONSTELAÇÃO FAMILIAR</a>
+            <h3>OUTROS CAMINHOS:</h3>
+            <a href="psicanalise.html" class="btn-footer">PSICANÁLISE</a>
+            <a href="constelacao.html" class="btn-footer">CONSTELAÇÃO</a>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 YURI OLIVEIRA - TAUBATÉ/SP - TERAPEUTAESPIRITUALISTA.COM.BR</p>
+            <p>YURI OLIVEIRA &copy; 2026 | TAUBATÉ-SP | TERAPEUTAESPIRITUALISTA.COM.BR</p>
         </div>
     </footer>
 
