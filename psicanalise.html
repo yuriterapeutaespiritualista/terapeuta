@@ -25,8 +25,10 @@
         header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 900; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #ccc; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
         .btn-nav { background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0px; text-decoration: none; font-weight: 900; font-size: 0.8rem; transition: 0.3s; }
-        .btn-nav:hover { background: #fff; color: var(--accent); }
 
         .hero { padding: 100px 0; background: var(--primary); color: #fff; }
         .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
@@ -36,7 +38,7 @@
         .hero h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 25px; color: #fff; }
         .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.8; }
         .cta-main { display: inline-block; background: var(--accent); color: #fff; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
-        .cta-main:hover { transform: scale(1.05); background: #966e3f; }
+        .cta-main:hover { transform: scale(1.05); }
 
         .highlight-box { background: #f0f0f0; border-left: 10px solid var(--accent); padding: 60px 40px; text-align: left; margin: 40px 0; }
         .highlight-box h2 { color: var(--primary); font-size: 2.2rem; margin-bottom: 20px; }
@@ -65,6 +67,7 @@
         .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
         .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: var(--primary); font-size: 1.1rem; }
         .faq-answer { display: none; padding-top: 15px; color: #555; }
+        .faq-item.active .faq-answer { display: block; }
 
         .footer-links { background: #000; color: #fff; padding: 80px 0; text-align: center; border-top: 1px solid #333; }
         .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid var(--accent); text-decoration: none; font-weight: 700; margin: 10px; transition: 0.3s; }
@@ -73,6 +76,9 @@
         footer { background: #000; color: #666; padding: 40px 0; text-align: center; font-size: 0.8rem; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+        }
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .section-title h2 { font-size: 2.2rem; }
@@ -83,8 +89,12 @@
 
     <header>
         <div class="container nav-inner">
-            <a href="index.html" class="logo">YURI OLIVEIRA | PSICANÁLISE ESPIRITUALISTA</a>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">AGENDAR SESSÃO</a>
+            <a href="index.html" class="logo">YURI OLIVEIRA | PSICANÁLISE</a>
+            <div class="nav-links">
+                <a href="index.html">Vida Passada</a>
+                <a href="constelacao.html">Constelação</a>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">AGENDAR SESSÃO</a>
+            </div>
         </div>
     </header>
 
@@ -157,16 +167,64 @@
 
     <section class="section-light">
         <div class="container">
-            <div class="section-title"><h2>DÚVIDAS FREQUENTES</h2></div>
+            <div class="section-title"><h2>POR QUE ESTE PROCESSO É PARA VOCÊ?</h2></div>
             <div style="max-width: 850px;">
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">Preciso estar em crise para começar? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">De forma alguma. A análise é para quem quer crescer, ter sucesso e viver com clareza. É o alicerce para quem deseja ser o dono da própria história.</div>
+                    <div class="faq-question">Psicanálise é só para quem está em crise? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Pelo contrário. A análise é o combustível dos grandes líderes. É para quem quer parar de reagir como criança aos problemas e assumir uma postura de poder e sucesso na vida.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O que é o lado "Espiritualista" da análise? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">É entender que você tem uma energia vital. Trabalhamos para que essa energia não fique bloqueada por traumas ou medos, deixando você mais leve e conectado.</div>
+                    <div class="faq-question">Por que fazer análise para sempre? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Assim como você cuida do corpo diariamente, a mente e o ego precisam de manutenção. Estruturar seu interior garante que sua vida financeira e emocional nunca parem de crescer.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O atendimento online funciona mesmo? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim!
+                    <div class="faq-question">O lado espiritual interfere na técnica? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Não usamos religião. Usamos bioenergia. Entendemos que você é um ser energético; se sua energia está bloqueada, nenhuma estratégia mental vai te fazer prosperar.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Quanto tempo leva para ver resultados? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">A clareza é imediata. Você sai das primeiras sessões entendendo padrões que te travaram por décadas. O resultado é proporcional à sua entrega ao processo.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-links">
+        <div class="container">
+            <h3>OUTRAS SOLUÇÕES PARA DESTRAVAR SUA VIDA:</h3>
+            <a href="index.html" class="btn-outline">TERAPIA DE VIDA PASSADA</a>
+            <a href="constelacao.html" class="btn-outline">CONSTELAÇÃO FAMILIAR</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 YURI OLIVEIRA - TAUBATÉ/SP - TERAPEUTAESPIRITUALISTA.COM.BR</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5512974118240" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function toggleFaq(el) {
+            const answer = el.querySelector('.faq-answer');
+            const icon = el.querySelector('i');
+            const isOpen = answer.style.display === 'block';
+            
+            // Fecha todos os outros
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            document.querySelectorAll('.faq-question i').forEach(i => {
+                i.classList.remove('fa-minus');
+                i.classList.add('fa-plus');
+            });
+
+            // Abre o atual
+            if (!isOpen) {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+    </script>
+</body>
+</html>
