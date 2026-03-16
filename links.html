@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Oliveira | Links Oficiais</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --bg: #000000;
+            --card-bg: #1a1a1a;
+            --primary-text: #ffffff;
+            --secondary-text: #a0a0a0;
+            --border: #333333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--primary-text);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .bio-container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Foto de Perfil */
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .profile-description {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* Links */
+        .links-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--primary-text);
+            text-decoration: none;
+            padding: 18px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .link-card:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+            transform: scale(1.02);
+        }
+
+        .link-card i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Destaque para o WhatsApp */
+        .btn-whatsapp {
+            background-color: #25d366;
+            border: none;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+            color: #fff;
+            border: none;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bio-container">
+        <img src="basenovo.png" alt="Yuri Oliveira" class="profile-img">
+        
+        <h1 class="profile-name">Yuri Oliveira</h1>
+        <p class="profile-description">
+            Destravando padrões invisíveis através da <br>
+            Psicanálise e Terapias Sistêmicas.
+        </p>
+
+        <div class="links-stack">
+            
+            <a href="constelacao.html" class="link-card">
+                <i class="fas fa-users"></i>
+                Constelação Familiar (R$ 149)
+            </a>
+
+            <a href="psicanalise.html" class="link-card">
+                <i class="fas fa-brain"></i>
+                Psicanálise Espiritualista
+            </a>
+
+            <a href="index.html" class="link-card">
+                <i class="fas fa-history"></i>
+                Terapia de Vida Passada
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20vi%20seu%20link%20no%20Instagram%20e%20gostaria%20de%20falar%20com%20você." class="link-card btn-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+
+        </div>
+
+        <footer>
+            Yuri Oliveira &copy; 2026
+        </footer>
+    </div>
+
+</body>
+</html>
