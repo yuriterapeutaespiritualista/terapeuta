@@ -3,67 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yuri Oliveira - Terapeuta de Vida Passada. Captação Psíquica, Regressão e Psicanálise.">
-    <title>Yuri Oliveira | Terapeuta de Vida Passada</title>
+    <meta name="description" content="Yuri Oliveira - Terapeuta de Vida Passada. Captação Psíquica e Regressão para destravar sua vida.">
+    <title>Yuri Oliveira | Terapia de Vida Passada</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #7d8c73; --accent: #d4a373; --text: #2c2c2c; --bg: #fdfaf6; }
+        :root { 
+            --primary: #2e0854; /* Índigo Profundo */
+            --accent: #8a2be2;  /* Violeta Elétrico */
+            --text: #1a1a1a; 
+            --light-bg: #f5f3f7;
+            --white: #ffffff;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; color: var(--text); line-height: 1.8; background: #fff; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; text-transform: uppercase; letter-spacing: -1px; }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
 
-        header { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; color: var(--primary); text-decoration: none; font-weight: 700; text-transform: uppercase; }
+        .logo { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 900; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; }
-        .btn-nav { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.8rem; }
+        .nav-links a { text-decoration: none; color: #ccc; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .btn-nav { background: var(--primary); color: #fff; padding: 12px 24px; border-radius: 0px; text-decoration: none; font-weight: 900; font-size: 0.8rem; border: 1px solid var(--accent); transition: 0.3s; }
 
-        .hero { padding: 100px 0; background: var(--bg); }
+        .hero { padding: 100px 0; background: var(--primary); color: #fff; background-image: linear-gradient(135deg, #2e0854 0%, #1a052e 100%); }
         .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
         .hero-text { flex: 1.2; min-width: 320px; }
         .hero-img { flex: 0.8; min-width: 320px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 20px 20px 0px var(--primary); }
-        .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 25px; color: var(--primary); }
-        .cta-main { display: inline-block; background: var(--primary); color: #fff; padding: 20px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        .hero-img img { width: 100%; max-width: 400px; border-radius: 0px; border: 10px solid var(--accent); box-shadow: 0 0 30px rgba(138, 43, 226, 0.3); }
+        .hero h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 25px; color: #fff; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.9; }
+        .cta-main { display: inline-block; background: var(--accent); color: #fff; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
+        .cta-main:hover { transform: scale(1.05); background: #9d4edd; }
 
-        .special-invite { background: var(--accent); color: #fff; padding: 50px 0; text-align: center; margin: 40px 0; border-radius: 8px; }
-        .btn-white { display: inline-block; background: #fff; color: var(--accent); padding: 15px 35px; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px; }
+        .special-box { background: #000; color: #fff; padding: 60px 40px; text-align: center; margin: 40px 0; border: 2px solid var(--accent); }
+        .special-box h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--accent); }
+        .btn-white { display: inline-block; background: #fff; color: #000; padding: 18px 40px; text-decoration: none; font-weight: 900; margin-top: 25px; transition: 0.3s; }
 
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { padding: 40px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; display: block; }
+        .section-light { padding: 100px 0; background: #fff; }
+        .section-title { text-align: left; margin-bottom: 60px; border-left: 8px solid var(--primary); padding-left: 20px; }
+        .section-title h2 { font-size: 2.8rem; color: var(--primary); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { padding: 40px; background: var(--light-bg); border-bottom: 5px solid var(--primary); transition: 0.3s; }
+        .card:hover { background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 25px; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
 
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; }
-        .about-photo img { width: 100%; border-radius: 8px; box-shadow: -20px 20px 0px var(--accent); }
-        .about-text h2 { font-size: 2.2rem; margin-bottom: 25px; line-height: 1.2; }
+        .about-photo img { width: 100%; border-left: 15px solid var(--primary); }
+        .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; color: var(--primary); }
 
-        .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; cursor: pointer; }
-        .faq-question { display: flex; justify-content: space-between; font-weight: 700; }
-        .faq-answer { display: none; padding-top: 15px; color: #666; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: var(--primary); font-size: 1.1rem; }
+        .faq-answer { display: none; padding-top: 15px; color: #555; }
 
-        .page-link-box { background: #333; color: #fff; padding: 60px 0; text-align: center; }
-        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid #fff; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px; transition: 0.3s; }
-        .btn-outline:hover { background: #fff; color: #333; }
+        .footer-links { background: #000; color: #fff; padding: 80px 0; text-align: center; border-top: 1px solid #333; }
+        .btn-outline { display: inline-block; background: transparent; color: #fff; padding: 15px 30px; border: 2px solid var(--accent); text-decoration: none; font-weight: 700; margin: 10px; transition: 0.3s; }
+        .btn-outline:hover { background: var(--accent); }
 
-        footer { background: #fafafa; padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
+        footer { background: #000; color: #666; padding: 40px 0; text-align: center; font-size: 0.8rem; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
+
+        @media (max-width: 992px) { .nav-links { display: none; } }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .section-title h2 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-inner">
-            <a href="index.html" class="logo">Yuri Oliveira - Terapeuta de Vida Passada</a>
+            <a href="index.html" class="logo">YURI OLIVEIRA | VIDA PASSADA</a>
             <div class="nav-links">
                 <a href="psicanalise.html">Psicanálise</a>
+                <a href="constelacao.html">Constelação</a>
                 <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">FALAR COMIGO</a>
             </div>
         </div>
@@ -72,9 +92,9 @@
     <section class="hero">
         <div class="container hero-flex">
             <div class="hero-text">
-                <h1>Sua vida parece travada e você não entende o porquê?</h1>
-                <p>Bloqueios no dinheiro, no amor ou medos que não fazem sentido hoje podem ter raízes em suas vidas passadas. O peso que você carrega não é culpa sua.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20entrevista%20gratuita" class="cta-main">QUERO QUEBRAR ESTE CICLO</a>
+                <h1>SUA VIDA PARECE TRAVADA E VOCÊ NÃO ENTENDE O PORQUÊ?</h1>
+                <p>Bloqueios financeiros, fracassos no amor ou medos irracionais... O peso que você carrega hoje pode ter raízes em suas vidas passadas. Chegou a hora de cortar esse vínculo.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá%20Yuri,%20quero%20agendar%20minha%20entrevista%20gratuita" class="cta-main">QUEBRAR ESTE CICLO AGORA</a>
             </div>
             <div class="hero-img">
                 <img src="toponovo.png" alt="Yuri Oliveira - Terapia de Vida Passada">
@@ -83,97 +103,92 @@
     </section>
 
     <div class="container">
-        <div class="special-invite">
-            <h2>Vamos conversar sobre Terapia de Vida Passada?</h2>
-            <p>Ganhe uma entrevista inicial de 30 minutos, inteiramente gratuita e online, para entender o que está te segurando.</p>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20marcar%20minha%20entrevista%20gratuita" class="btn-white">AGENDAR ENTREVISTA GRATUITA</a>
+        <div class="special-box">
+            <h2>ENTREVISTA INICIAL GRATUITA</h2>
+            <p>Ganhe 30 minutos de conversa online para identificarmos o que está te segurando. Sem compromisso.</p>
+            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri,%20quero%20marcar%20minha%20entrevista%20gratuita" class="btn-white">AGENDAR MINHA VAGA</a>
         </div>
     </div>
 
-    <section style="background: var(--bg);">
+    <section class="section-light" style="background: var(--light-bg);">
         <div class="container">
-            <div class="section-title"><h2>Regressão sem transe profundo</h2></div>
+            <div class="section-title">
+                <h2>REGRESSÃO SEM TRANSE PROFUNDO</h2>
+            </div>
             <div class="grid">
                 <div class="card" style="background:#fff">
-                    <h3>Mais fácil e rápido</h3>
-                    <p>A Captação Psíquica entrega os mesmos resultados de uma Regressão tradicional, mas você não precisa "apagar" ou ter dificuldade em relaxar.</p>
+                    <i class="fas fa-bolt"></i>
+                    <h3>MAIS RÁPIDO</h3>
+                    <p>A Captação Psíquica entrega resultados de regressão tradicional sem que você precise "apagar" ou ter dificuldade em relaxar.</p>
                 </div>
                 <div class="card" style="background:#fff">
-                    <h3>Atuo como sua ponte</h3>
-                    <p>Eu acesso as memórias por você. É um processo mais leve, focado em limpar a carga negativa que trava o seu dia a dia.</p>
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>EU SOU A PONTE</h3>
+                    <p>Eu acesso as memórias e registros por você. Um processo leve, seguro e focado em limpar a carga que trava o seu presente.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="section-light">
         <div class="container">
-            <div class="section-title"><h2>O que vamos resolver juntos?</h2></div>
+            <div class="section-title">
+                <h2>O QUE VAMOS RESOLVER?</h2>
+            </div>
             <div class="grid">
-                <div class="card"><i class="fas fa-coins"></i><h3>Prosperidade</h3><p>Limpamos o medo do sucesso e traumas de escassez de outras vidas.</p></div>
-                <div class="card"><i class="fas fa-heart"></i><h3>Relacionamentos</h3><p>Quebramos o ciclo de rejeição e abandono que se repete em seus vínculos.</p></div>
-                <div class="card"><i class="fas fa-briefcase-medical"></i><h3>Dores Físicas</h3><p>Muitas dores sem explicação médica são gritos da alma. Ao limpar o passado, o corpo finalmente relaxa.</p></div>
+                <div class="card"><i class="fas fa-hand-holding-usd"></i><h3>PROSPERIDADE</h3><p>Limpamos o medo do sucesso e traumas de escassez que sua alma carrega.</p></div>
+                <div class="card"><i class="fas fa-heart-broken"></i><h3>RELACIONAMENTOS</h3><p>Quebramos o ciclo de rejeição e abandono que se repete em seus vínculos.</p></div>
+                <div class="card"><i class="fas fa-pills"></i><h3>DORES DA ALMA</h3><p>Muitas dores sem explicação médica são memórias traumáticas. Ao limpar o passado, o corpo relaxa.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="about" style="background: var(--bg);">
+    <section class="section-light" style="background: #f9f9f9;">
         <div class="container about-grid">
             <div class="about-photo">
                 <img src="basenovo.png" alt="Yuri Oliveira">
             </div>
             <div class="about-text">
-                <h2>Desenvolver pessoas é a minha paixão. <br><span style="color: var(--primary);">Ver você livre é a minha missão.</span></h2>
-                <p>Minha jornada é movida por uma pergunta: por que as pessoas sofrem tanto? Comecei nas terapias naturais e percebi que somos muito mais profundos do que os olhos podem ver.</p>
-                <p>Busquei a base científica na <strong>Psicanálise</strong> e a performance no <strong>Coaching</strong>. Unindo tudo isso à força das terapias de vidas passadas, desenvolvi um caminho onde os resultados são muito mais velozes.</p>
-                <p>Minha paixão é ver o "despertar" do meu cliente. Entendo que somos feitos de corpo e alma, e é por isso que consigo resultados que outros terapeutas não alcançam.</p>
-                <a href="psicanalise.html" class="cta-main" style="margin-top:20px; background: #333;">QUERO CONHECER A PSICANÁLISE</a>
+                <h2>YURI OLIVEIRA</h2>
+                <p>Minha jornada é movida por uma missão: por que as pessoas sofrem tanto se o potencial delas é infinito?</p>
+                <p>Unindo a base científica da **Psicanálise** com a força das terapias de vidas passadas, desenvolvi um método onde os resultados são brutais e velozes.</p>
+                <p><strong>Ver o seu despertar não é apenas meu trabalho, é a minha paixão.</strong></p>
+                <a href="psicanalise.html" class="cta-main" style="margin-top:20px; background: #333;">CONHECER A PSICANÁLISE</a>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="section-light">
         <div class="container">
-            <div class="section-title"><h2>Dúvidas Frequentes</h2></div>
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div class="section-title"><h2>PERGUNTAS CRUCIAIS</h2></div>
+            <div style="max-width: 850px;">
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">Eu não consigo ser hipnotizado, funciona para mim? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Com certeza! Eu faço o acesso às memórias por você. Você recebe os benefícios da regressão sem precisar entrar em transe.</div>
+                    <div class="faq-question">Eu corro algum risco de não voltar? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Zero. Na Captação Psíquica você fica consciente o tempo todo. Eu acesso as informações para você, tornando o processo 100% seguro.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">Como sei que meus problemas vêm de vidas passadas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Se você vive padrões repetitivos ou tem medos inexplicáveis, a raiz quase sempre está no passado da sua alma.</div>
+                    <div class="faq-question">E se eu não acreditar em vidas passadas? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Seu inconsciente não precisa de crenças, ele precisa de símbolos. O método funciona independente da sua religião ou ceticismo, pois acessa bloqueios emocionais reais.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O resultado é demorado? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Não. Como vamos direto na causa raiz, o alívio costuma ser imediato. É um caminho muito mais rápido do que terapias comuns.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O atendimento online funciona? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim! Trabalhamos com a energia e a memória da sua alma, que não dependem de barreira física. O resultado é idêntico ao presencial.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">A terapia ajuda em dores físicas? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Sim. Dores que o médico não explica muitas vezes são traumas antigos. Quando limpamos a alma, o corpo relaxa e a dor pode sumir.</div>
+                    <div class="faq-question">O resultado é realmente imediato? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Sim. Ao limparmos a carga energética de um trauma do passado, o alívio emocional e a mudança de percepção no seu dia a dia acontecem na mesma semana.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="page-link-box">
+    <div class="footer-links">
         <div class="container">
-            <h3>Deseja fortalecer sua base interna e dominar suas emoções?</h3>
-            <p>Conheça também meu trabalho com Psicanálise Espiritualista para estruturar seu ego e prosperar de verdade.</p>
-            <a href="psicanalise.html" class="btn-outline">VER PSICANÁLISE ESPIRITUALISTA</a>
+            <h3>OUTROS CAMINHOS DE EVOLUÇÃO:</h3>
+            <a href="psicanalise.html" class="btn-outline">PSICANÁLISE ESPIRITUALISTA</a>
+            <a href="constelacao.html" class="btn-outline">CONSTELAÇÃO FAMILIAR</a>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <h3>Yuri Oliveira</h3>
-            <p>Terapeuta de Vida Passada | Psicanalista | Coach</p>
-            <p>Taubaté, SP | Atendimento Online</p>
-            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Yuri Oliveira - terapeutaespiritualista.com.br</p>
+            <p>&copy; 2026 YURI OLIVEIRA - TAUBATÉ/SP - TERAPEUTAESPIRITUALISTA.COM.BR</p>
         </div>
     </footer>
 
@@ -183,9 +198,9 @@
         function toggleFaq(el) {
             const answer = el.querySelector('.faq-answer');
             const icon = el.querySelector('i');
-            const isOpen = answer.style.display === 'block';
+            const isOpen = (answer.style.display === 'block');
             document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            document.querySelectorAll('.faq-question i').forEach(i => i.className = 'fas fa-plus');
+            document.querySelectorAll('.faq-question i').forEach(i => { i.className = 'fas fa-plus'; });
             if (!isOpen) { answer.style.display = 'block'; icon.className = 'fas fa-minus'; }
         }
     </script>
