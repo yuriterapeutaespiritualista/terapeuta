@@ -3,76 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yuri Oliveira - Constelação Familiar Individual. A clareza de um ano de evolução em uma única sessão.">
-    <title>Yuri Oliveira | Constelação Familiar Individual</title>
+    <meta name="description" content="Yuri Oliveira - Constelação Familiar. Recupere sua força e assuma seu lugar no sistema.">
+    <title>Yuri Oliveira | Constelação Familiar</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root { 
-            --primary: #1c1c1c; /* Chumbo Escuro - Paleta Psicanálise */
-            --accent: #444444;  
-            --card-bg: #252525;
-            --highlight: #ffffff;
-            --text-gray: #b0b0b0;
-            --silver: #e0e0e0;
+            --primary: #1a2e35; 
+            --accent: #b58951; 
+            --text: #1a1a1a; 
+            --light-bg: #f8f9fa;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #fff; line-height: 1.6; background: var(--primary); }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; text-transform: uppercase; letter-spacing: -1px; }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 25px; }
 
-        header { background: #000; padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
+        header { background: #000; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; color: #fff; text-decoration: none; font-weight: 900; letter-spacing: 2px; }
-        .nav-links { display: flex; gap: 25px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text-gray); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: #fff; }
-        .btn-nav { border: 2px solid #fff; color: #fff; padding: 10px 25px; text-decoration: none; font-weight: 900; font-size: 0.8rem; transition: 0.3s; }
-        .btn-nav:hover { background: #fff; color: #000; }
+        .logo { font-size: 1rem; color: #fff; text-decoration: none; font-weight: 900; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #ccc; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .btn-nav { background: var(--accent); color: #fff; padding: 12px 24px; text-decoration: none; font-weight: 900; font-size: 0.8rem; transition: 0.3s; }
 
-        .hero { padding: 120px 0; background: var(--primary); }
+        .hero { padding: 100px 0; background: var(--primary); color: #fff; }
         .hero-flex { display: flex; align-items: center; gap: 60px; flex-wrap: wrap-reverse; }
         .hero-text { flex: 1.2; min-width: 320px; }
         .hero-img { flex: 0.8; min-width: 320px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 420px; border: 1px solid #444; filter: grayscale(100%); transition: 0.8s; }
-        .hero-img img:hover { filter: grayscale(0%); }
-        .hero h1 { font-size: 3.8rem; line-height: 1; margin-bottom: 25px; color: var(--silver); }
-        .hero p { font-size: 1.3rem; margin-bottom: 40px; color: var(--text-gray); font-weight: 400; }
-        .cta-main { display: inline-block; background: #fff; color: #000; padding: 25px 60px; text-decoration: none; font-weight: 900; font-size: 1.3rem; text-align: center; transition: 0.4s; }
-        .cta-main:hover { background: var(--silver); transform: scale(1.05); }
+        .hero-img img { width: 100%; max-width: 400px; border: 10px solid var(--accent); }
+        .hero h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 25px; color: #fff; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.8; }
+        .cta-main { display: inline-block; background: var(--accent); color: #fff; padding: 22px 50px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-align: center; transition: 0.3s; }
+        .cta-main:hover { transform: scale(1.05); }
 
-        .invite-box { background: #111; padding: 60px 40px; text-align: center; margin: 40px 0; border: 1px solid #333; border-top: 5px solid #fff; }
-        .invite-box h2 { color: #fff; font-size: 2rem; margin-bottom: 15px; }
-        .btn-outline-white { display: inline-block; border: 2px solid #fff; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 900; margin-top: 20px; transition: 0.3s; }
-        .btn-outline-white:hover { background: #fff; color: #000; }
+        .highlight-box { background: #f0f0f0; border-left: 10px solid var(--accent); padding: 60px 40px; margin: 40px 0; }
+        .highlight-box h2 { color: var(--primary); font-size: 2.2rem; margin-bottom: 20px; }
+        .highlight-box p { font-size: 1.2rem; color: #444; line-height: 1.8; }
 
-        .section-title { text-align: left; margin-bottom: 80px; border-left: 10px solid #fff; padding-left: 25px; }
-        .section-title h2 { font-size: 3rem; }
+        .section-light { padding: 100px 0; background: #fff; }
+        .section-title { text-align: left; margin-bottom: 60px; border-left: 8px solid var(--accent); padding-left: 20px; }
+        .section-title h2 { font-size: 2.8rem; color: var(--primary); }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .card { padding: 50px; background: var(--card-bg); border: 1px solid #333; transition: 0.4s; }
-        .card:hover { border-color: #fff; transform: translateY(-10px); }
-        .card i { font-size: 3rem; color: #fff; margin-bottom: 30px; display: block; }
-        .card h3 { font-size: 1.6rem; margin-bottom: 20px; letter-spacing: 1px; }
-        .card p { color: var(--text-gray); font-size: 1.05rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { padding: 40px; background: var(--light-bg); border-bottom: 5px solid var(--accent); transition: 0.3s; }
+        .card:hover { background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
 
-        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 80px; align-items: center; padding: 120px 0; border-top: 1px solid #333; }
-        .about-photo img { width: 100%; border: 1px solid #444; filter: grayscale(100%); }
-        .about-text h2 { font-size: 3.5rem; margin-bottom: 35px; }
-        .about-text p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 25px; }
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; }
+        .about-photo img { width: 100%; border-right: 15px solid var(--accent); }
+        .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; color: var(--primary); }
+        .about-text p { font-size: 1.1rem; margin-bottom: 20px; }
 
-        .faq-section { padding: 120px 0; background: #0c0c0c; }
-        .faq-item { border-bottom: 1px solid #333; padding: 35px 0; cursor: pointer; transition: 0.3s; }
-        .faq-item:hover { background: #151515; padding-left: 20px; }
-        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: #fff; font-size: 1.2rem; text-transform: uppercase; }
-        .faq-answer { display: none; padding-top: 25px; color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; }
+        .faq-answer { display: none; padding-top: 15px; color: #555; line-height: 1.8; }
 
-        footer { background: #000; color: #666; padding: 50px 0; text-align: center; font-size: 0.85rem; letter-spacing: 3px; border-top: 1px solid #333; }
-        .wa-float { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        footer { background: #000; color: #666; padding: 40px 0; text-align: center; border-top: 1px solid #333; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } .section-title h2 { font-size: 2.2rem; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .section-title h2 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
@@ -83,7 +76,7 @@
             <div class="nav-links">
                 <a href="capitacao.html">Captação Psíquica</a>
                 <a href="psicanalise.html">Psicanálise</a>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">FALAR COMIGO</a>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="btn-nav">AGENDAR SESSÃO</a>
             </div>
         </div>
     </header>
@@ -92,87 +85,70 @@
         <div class="container hero-flex">
             <div class="hero-text">
                 <h1>VOCÊ ESTÁ CARREGANDO UM PESO QUE NÃO É SEU.</h1>
-                <p>A clareza de um ano de evolução, alcançada em uma única sessão. Pare de repetir o roteiro de fracassos da sua família e assuma o seu verdadeiro lugar de força.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá Yuri, quero agendar meu Mapeamento Sistêmico" class="cta-main">ASSUMIR MEU LUGAR</a>
+                <p>Identifique as lealdades invisíveis que travam sua prosperidade. A clareza de um ano de evolução, alcançada em uma única sessão.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá Yuri, quero agendar meu Mapeamento Sistêmico" class="cta-main">ASSUMIR MEU LUGAR AGORA</a>
             </div>
             <div class="hero-img">
-                <img src="toponovo.png" alt="Yuri Oliveira - Constelação Familiar">
+                <img src="toponovo.png" alt="Yuri Oliveira">
             </div>
         </div>
     </section>
 
     <div class="container">
-        <div class="invite-box">
-            <h2>ENTREVISTA INICIAL GRATUITA</h2>
-            <p>30 minutos online para identificarmos onde sua vida travou. Sem rodeios e direto ao ponto.</p>
-            <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri, quero marcar minha entrevista gratuita de Constelação" class="btn-outline-white">AGENDAR MINHA VAGA</a>
+        <div class="highlight-box">
+            <h2>ONDE O FLUXO DA SUA VIDA PAROU?</h2>
+            <p>Seja na escassez financeira ou em relações que fracassam sempre com o mesmo roteiro, a sensação é de estar com o freio de mão puxado. A Constelação revela onde a ordem foi quebrada e devolve o comando da sua história.</p>
         </div>
     </div>
 
-    <section class="container" style="padding: 100px 0;">
-        <div class="section-title"><h2>MECANISMO SISTÊMICO</h2></div>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-search-location"></i>
-                <h3>DIAGNÓSTICO DE PRECISÃO</h3>
-                <p>Enquanto métodos comuns levam meses para mapear o problema, a Constelação Individual identifica em minutos o nó sistêmico que drena sua energia e impede seu crescimento.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-sync-alt"></i>
-                <h3>REPOSIÇÃO DE FORÇA</h3>
-                <p>Não é apenas entender o passado, é reorganizar o presente. Você sai da sessão com o alívio imediato e a postura correta para que o fluxo da vida volte a fluir.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container" style="padding-bottom: 100px;">
-        <div class="section-title"><h2>O QUE VAMOS RESOLVER?</h2></div>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>SUCESSO FINANCEIRO</h3>
-                <p>Identificamos lealdades invisíveis à falência ou pobreza que você carrega para "pertencer" ao seu sistema familiar e as desfazemos na raiz.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h3>HARMONIA NAS RELAÇÕES</h3>
-                <p>Entendemos onde a ordem foi quebrada entre pais, filhos ou parceiros, permitindo que o respeito e o amor voltem a ocupar o lugar do conflito.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-crown"></i>
-                <h3>DESTINO PRÓPRIO</h3>
-                <p>Devolva simbolicamente o que pertence aos seus antepassados e conquiste a liberdade de escrever sua própria história, sem pesos ou culpas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container about-grid">
-        <div class="about-photo">
-            <img src="basenovo.png" alt="Yuri Oliveira">
-        </div>
-        <div class="about-text">
-            <h2>YURI OLIVEIRA</h2>
-            <p>Minha missão é simples: por que você continua sofrendo se o seu potencial é infinito? Eu estive exatamente onde você está hoje, empurrando a vida com o freio de mão puxado.</p>
-            <p>Unindo a base sistêmica à prática terapêutica, desenvolvi um método focado em resultados velozes para quem não tem tempo a perder com processos lentos e ineficazes.</p>
-            <p><strong>Ver você assumir o comando da sua própria história é o que me move.</strong></p>
-        </div>
-    </section>
-
-    <section class="faq-section">
+    <section class="section-light">
         <div class="container">
-            <div class="section-title"><h2>POR QUE ESTE MÉTODO?</h2></div>
+            <div class="section-title"><h2>MECANISMO SISTÊMICO</h2></div>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>DIAGNÓSTICO DE PRECISÃO</h3>
+                    <p>Identificamos em minutos o nó sistêmico que drena sua energia, enquanto métodos comuns levariam meses de investigação.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>REPOSIÇÃO DE FORÇA</h3>
+                    <p>Reorganizamos as leis de ordem e pertencimento. Você sai da sessão com alívio imediato e a postura correta para o sucesso.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-crown"></i>
+                    <h3>DESTINO PRÓPRIO</h3>
+                    <p>Devolva o que pertence aos seus antepassados e conquiste a liberdade de escrever sua história sem culpas ou pesos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light" style="background: #f9f9f9;">
+        <div class="container about-grid">
+            <div class="about-photo">
+                <img src="basenovo.png" alt="Yuri Oliveira">
+            </div>
+            <div class="about-text">
+                <h2>YURI OLIVEIRA</h2>
+                <p>Minha missão é simples: por que você continua sofrendo se o seu potencial é infinito? Unindo a base sistêmica à prática terapêutica, desenvolvi um método focado em resultados velozes.</p>
+                <p>Ver você assumir o comando da sua própria história é o que me move.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main">FALAR COMIGO</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="section-title"><h2>RESULTADOS REAIS</h2></div>
             <div style="max-width: 900px;">
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">POR QUE ESCOLHER A CONSTELAÇÃO EM VEZ DA TERAPIA CONVENCIONAL? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">A terapia convencional foca no comportamento e no Ego consciente. A Constelação foca na alma e no sistema. Enquanto um método leva meses para descrever o problema, a Constelação revela a solução em uma única sessão. É a economia de tempo para quem busca resolução imediata.</div>
+                    <div class="faq-question">POR QUE É MAIS RÁPIDO QUE A TERAPIA CONVENCIONAL? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">A terapia comum foca no comportamento do Ego. A Constelação foca na alma e no sistema. Revelamos a solução em uma única sessão, recuperando o seu tempo de vida.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">EU PRECISO QUE MINHA FAMÍLIA ESTEJA PRESENTE? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Não. O trabalho é 100% individual. Atuamos na sua percepção e na sua conexão com o sistema familiar através de elementos simbólicos. Quando você muda o seu lugar interno, todo o seu sistema externo se move em resposta.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">COMO ISSO IMPACTA MEUS RESULTADOS FINANCEIROS? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">O sucesso tem a face da mãe e a força do pai. Se você está em conflito ou fora do seu lugar em relação a eles, você terá dificuldade em "tomar" a vida e o dinheiro. A Constelação ajusta essa engrenagem para que você pare de sabotar o seu próprio crescimento.</div>
+                    <div class="faq-question">COMO ISSO AJUDA MEUS RESULTADOS FINANCEIROS? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">O sucesso tem a face da mãe e a força do pai. Se você está fora do seu lugar em relação a eles, sabotará seu crescimento. Ajustamos essa engrenagem interna.</div>
                 </div>
             </div>
         </div>
@@ -180,7 +156,7 @@
 
     <footer>
         <div class="container">
-            <p>YURI OLIVEIRA &copy; 2026 | TAUBATÉ-SP | TERAPEUTAESPIRITUALISTA.COM.BR</p>
+            <p>YURI OLIVEIRA &copy; 2026 | TAUBATÉ-SP</p>
         </div>
     </footer>
 
@@ -190,9 +166,9 @@
         function toggleFaq(el) {
             const answer = el.querySelector('.faq-answer');
             const icon = el.querySelector('i');
-            const isOpen = (answer.style.display === 'block');
+            const isOpen = answer.style.display === 'block';
             document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            document.querySelectorAll('.faq-question i').forEach(i => i.className = 'fas fa-plus');
+            document.querySelectorAll('.faq-question i').forEach(i => { i.className = 'fas fa-plus'; });
             if (!isOpen) { answer.style.display = 'block'; icon.className = 'fas fa-minus'; }
         }
     </script>
