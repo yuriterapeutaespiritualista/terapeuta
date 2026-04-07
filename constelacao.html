@@ -53,14 +53,15 @@
         .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
         .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
 
+        .details-grid { background: var(--primary); color: #fff; padding: 60px 0; }
+        .details-flex { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; text-align: center; }
+        .detail-item i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; display: block; }
+        .detail-item span { font-weight: 900; display: block; font-size: 1.2rem; color: #fff; }
+
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center; }
         .about-photo img { width: 100%; border-right: 15px solid var(--accent); }
         .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; color: var(--primary); }
         .about-text p { font-size: 1.1rem; margin-bottom: 20px; }
-
-        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
-        .faq-question { display: flex; justify-content: space-between; font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; }
-        .faq-answer { display: none; padding-top: 15px; color: #555; line-height: 1.8; }
 
         footer { background: #000; color: #666; padding: 40px 0; text-align: center; border-top: 1px solid #333; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
@@ -85,8 +86,8 @@
         <div class="container hero-flex">
             <div class="hero-text">
                 <h1>VOCÊ ESTÁ CARREGANDO UM PESO QUE NÃO É SEU.</h1>
-                <p>Identifique as lealdades invisíveis que travam sua prosperidade. A clareza de um ano de evolução, alcançada em uma única sessão.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Olá Yuri, quero agendar meu Mapeamento Sistêmico" class="cta-main">ASSUMIR MEU LUGAR AGORA</a>
+                <p>Identifique as lealdades invisíveis que travam sua prosperidade. A clareza de um ano de evolução, alcançada em uma única sessão profunda.</p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri, quero agendar meu Mapeamento Sistêmico de 120 minutos" class="cta-main">ASSUMIR MEU LUGAR AGORA</a>
             </div>
             <div class="hero-img">
                 <img src="toponovo.png" alt="Yuri Oliveira">
@@ -97,7 +98,7 @@
     <div class="container">
         <div class="highlight-box">
             <h2>ONDE O FLUXO DA SUA VIDA PAROU?</h2>
-            <p>Seja na escassez financeira ou em relações que fracassam sempre com o mesmo roteiro, a sensação é de estar com o freio de mão puxado. A Constelação revela onde a ordem foi quebrada e devolve o comando da sua história.</p>
+            <p>Seja na escassez financeira ou em relações que fracassam sempre com o mesmo roteiro, a sensação é de estar com o freio de mão puxado. A Constelação revela onde a ordem foi quebrada e devolve o comando da sua história em uma intervenção direta.</p>
         </div>
     </div>
 
@@ -124,6 +125,14 @@
         </div>
     </section>
 
+    <div class="details-grid">
+        <div class="container details-flex">
+            <div class="detail-item"><i class="fas fa-clock"></i><span>120 MINUTOS</span>Sessão Única</div>
+            <div class="detail-item"><i class="fas fa-wallet"></i><span>R$ 149,00</span>Investimento</div>
+            <div class="detail-item"><i class="fas fa-laptop-house"></i><span>ONLINE / TAUBATÉ</span>Atendimento Flexível</div>
+        </div>
+    </div>
+
     <section class="section-light" style="background: #f9f9f9;">
         <div class="container about-grid">
             <div class="about-photo">
@@ -132,45 +141,18 @@
             <div class="about-text">
                 <h2>YURI OLIVEIRA</h2>
                 <p>Minha missão é simples: por que você continua sofrendo se o seu potencial é infinito? Unindo a base sistêmica à prática terapêutica, desenvolvi um método focado em resultados velozes.</p>
-                <p>Ver você assumir o comando da sua própria história é o que me move.</p>
-                <a href="https://api.whatsapp.com/send?phone=5512974118240" class="cta-main">FALAR COMIGO</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-light">
-        <div class="container">
-            <div class="section-title"><h2>RESULTADOS REAIS</h2></div>
-            <div style="max-width: 900px;">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">POR QUE É MAIS RÁPIDO QUE A TERAPIA CONVENCIONAL? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">A terapia comum foca no comportamento do Ego. A Constelação foca na alma e no sistema. Revelamos a solução em uma única sessão, recuperando o seu tempo de vida.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">COMO ISSO AJUDA MEUS RESULTADOS FINANCEIROS? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">O sucesso tem a face da mãe e a força do pai. Se você está fora do seu lugar em relação a eles, sabotará seu crescimento. Ajustamos essa engrenagem interna.</div>
-                </div>
+                <p><strong>Ver você assumir o comando da sua própria história é o que me move.</strong></p>
+                <a href="https://api.whatsapp.com/send?phone=5512974118240&text=Yuri, quero tirar uma dúvida sobre a Constelação" class="cta-main" style="background: #333;">FALAR COMIGO</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>YURI OLIVEIRA &copy; 2026 | TAUBATÉ-SP</p>
+            <p>YURI OLIVEIRA &copy; 2026 | TAUBATÉ-SP | TERAPEUTAESPIRITUALISTA.COM.BR</p>
         </div>
     </footer>
 
     <a href="https://api.whatsapp.com/send?phone=5512974118240" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-    <script>
-        function toggleFaq(el) {
-            const answer = el.querySelector('.faq-answer');
-            const icon = el.querySelector('i');
-            const isOpen = answer.style.display === 'block';
-            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            document.querySelectorAll('.faq-question i').forEach(i => { i.className = 'fas fa-plus'; });
-            if (!isOpen) { answer.style.display = 'block'; icon.className = 'fas fa-minus'; }
-        }
-    </script>
 </body>
 </html>
